@@ -4,20 +4,29 @@ class Vehicle {
         this.model = model;
         this.year = year;
         this.color = color;
-        this.passenger = 0;
+        this.passenger = 5;
         this.speed = 0;
-        this.mileage = mileage;
+        this.mileage = 30000;
         this.started = false;
         this.numberOfWheels = 0;
     }
-
+       loadPassenger(){
+        if(this.passenger = 5){ 
+            return this.loadPassenger=true;
+        console.log("maximum passenger!!");
+       }
+       else{
+        return this.loadPassenger = false;
+        console.log("passenger load available")
+       }
+       }
     start() {
-        if (this.fuel > 0) {
+        if (this.fuel >= 0) {
             return this.started = true;
-            console.log("engine started...!!!");
+            console.log("engine started!");
         } else {
             return this.started = false;
-            console.log("engine cannot start...");
+            console.log("engine cannot start.");
         }
     }
     accelerate() {
@@ -62,15 +71,17 @@ class Vehicle {
         decelerate();
     }
 
-    autoPark()
-    {
 
-    }
-
-    autoDrive()
-    {
-      
-    }
+    scheduleService(){
+        if(this.mileage = 30000){ 
+            return this.scheduleService=true;
+        console.log("time for maintainence!!");
+       }
+       else{
+        return this.mileage = false;
+        console.log("no maintenance needed")
+       }
+       }
 
     typeOfVehicle(wheels) {
         if (this.numberOfWheels == 8 && 8 == wheels) {
